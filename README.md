@@ -2,13 +2,14 @@
 
 This project uses OpenCV on a computer to detect an object and sends servo angle values to an Arduino.  
 The Arduino controls two servos (horizontal and vertical) to keep the object centered in the camera view.
-
+![img111](https://github.com/user-attachments/assets/0c69f436-d478-47c4-ad88-65c8becae647)
 ---
 
 ## Features
 - Real-time object tracking using OpenCV  
 - Arduino-controlled servo movement  
 - Supports two servos  
+
 
 ---
 
