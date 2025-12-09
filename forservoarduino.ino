@@ -30,7 +30,6 @@ void loop() {
       servoXpos = map(x, 0, 640, 0, 180);
       servoYpos = map(y, 0, 480, 0, 180);
 
-      // keep angles in safe range
       servoXpos = constrain(servoXpos, 0, 180);
       servoYpos = constrain(servoYpos, 0, 180);
 
@@ -40,3 +39,4 @@ void loop() {
     }
   }
 }
+
