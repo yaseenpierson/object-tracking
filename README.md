@@ -1,1 +1,73 @@
-# object-tracking
+# Arduino Servo Object Tracking (OpenCV)
+
+This project uses OpenCV on a computer to detect an object and sends servo angle values to an Arduino.  
+The Arduino controls one or two servos (pan or pan+tilt) to keep the object centered in the camera view.
+
+---
+
+## Features
+- Real-time object tracking using OpenCV  
+- Arduino-controlled servo movement  
+- Supports two servos  
+
+---
+
+## Requirements
+- Arduino board  
+- 2 Servo motors (SG90) 
+- Webcam  (laptop)
+- Python 3  
+
+Install Python packages:
+```
+pip install opencv-python numpy pyserial
+```
+
+---
+
+## How It Works
+1. OpenCV captures frames from the webcam  
+2. Python script detects an object
+3. Script calculates the object's position  
+4. Position is mapped to a servo angle  
+5. Angle is sent to Arduino through Serial  
+6. Arduino moves the servo to track the object  
+
+---
+
+## Wiring
+- Servo signal → **D9**  
+- Servo 5V → 5V or external power  
+- Servo GND → Arduino GND  
+- Second servo (optional): Signal → **D10**  
+
+⚠ **If using external power, all grounds must be common.**
+
+---
+
+## Project Structure
+```
+forservoarduino.ino
+objtrack.py
+README.md
+```
+
+---
+
+## Running the Project
+1. Upload the Arduino code  
+2. Run the Python script:
+```
+objtrack.py
+```
+3. Move the object → servo follows it  
+
+---
+
+## Notes
+- Adjust HSV / detection values in Python if tracking wrong object  
+- Make sure the correct COM port is selected  
+
+---
+
+
